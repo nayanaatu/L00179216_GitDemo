@@ -36,4 +36,4 @@ jobs:
     - name: Test with pytest
       run: |
         pip install pytest pytest-cov
-        pytest /home/runner/work/L00179216_GitDemo/L00179216_GitDemo/src/unittest/python/helloworld_tests.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
+        pytest /home/runner/work/L00179216_GitDemo/L00179216_GitDemo/src/unittest/python/helloworld_tests.py -V --cov=src/ --cov-report lcov:src/unittests/lcov.info
