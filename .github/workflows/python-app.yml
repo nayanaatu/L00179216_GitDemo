@@ -38,7 +38,7 @@ jobs:
         pip install pytest pytest-cov
         pytest -m /home/runner/work/L00179216_GitDemo/L00179216_GitDemo/src/unittest/python/helloworld_tests.py -V --cov=src/ --cov-report lcov:src/unittests/lcov.info
     - name: Upload Coverage Results
-      uses: L00179216_GitDemo/github-action@main
+      uses: actions/upload-artifact@v2
       with:
           github-token: ${{ secrets.github_token }}
           path-to-lcov: src/unittests/lcov.info
