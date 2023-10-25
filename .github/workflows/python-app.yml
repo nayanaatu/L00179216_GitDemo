@@ -36,7 +36,7 @@ jobs:
     - name: Test with pytest
       run: |
         pip install pytest pytest-cov codecov
-        python3 -m pytest /home/runner/work/L00179216_GitDemo/L00179216_GitDemo/src/unittest/python/helloworld_tests.py -V --junitxml=junit/test-results.xml --cov=src/ --cov-report=xml 
+        coverage run -m /home/runner/work/L00179216_GitDemo/L00179216_GitDemo/src/unittest/python/helloworld_tests.py -V --junitxml=junit/test-results.xml --cov=src/ --cov-report=xml 
         python3 -m codecov
     - name: Upload Coverage Results
       uses: actions/upload-artifact@v2
