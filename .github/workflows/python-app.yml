@@ -35,8 +35,9 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pip install pytest pytest-cov
-        python3 -m pytest /home/runner/work/L00179216_GitDemo/L00179216_GitDemo/src/unittest/python/helloworld_tests.py -V --junitxml=junit/test-results.xml --cov=src/dev --cov-report=xml src/unittest
+        pip install pytest pytest-cov codecov
+        python3 -m pytest /home/runner/work/L00179216_GitDemo/L00179216_GitDemo/src/unittest/python/helloworld_tests.py -V --junitxml=junit/test-results.xml --cov=./ --cov-report=xml 
+        codecov
     - name: Upload Coverage Results
       uses: actions/upload-artifact@v2
       with:
