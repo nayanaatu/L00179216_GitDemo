@@ -41,13 +41,10 @@ jobs:
         coverage html
     - name: Upload Coverage Results
       uses: codecov/codecov-action@v2
-  deployment:
-    runs-on: ubuntu-latest
-    environment: 
-      name: GithubActions-Demo
-      url: https://github.com
-    steps:
-      - name: deploy
-        # ...deployment-specific steps
-
+    - name: 'Deploy to Azure Web App'
+      uses: actions/webapps-deploy@v3
+      with:
+          app-name: 'test-webapp'
+          slot-name: 'GithubActions-Demo'
+  
          
