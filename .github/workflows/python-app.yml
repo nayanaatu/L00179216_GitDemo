@@ -39,7 +39,5 @@ jobs:
         coverage run -m pytest /home/runner/work/L00179216_GitDemo/L00179216_GitDemo/src/unittest/python/helloworld_tests.py -s -v  
         coverage html
     - name: Upload Coverage Results
-      uses: actions/upload-artifact@v2
-      with:
-        name: backend-coverage
-        path: ./src/unittest/coverage.xml
+      uses: codecov/codecov-action@v2
+      
