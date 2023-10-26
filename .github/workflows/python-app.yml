@@ -41,4 +41,13 @@ jobs:
         coverage html
     - name: Upload Coverage Results
       uses: codecov/codecov-action@v2
-      
+  deployment:
+    runs-on: ubuntu-latest
+    environment: 
+      name: GithubActions-Demo
+      url: https://github.com
+    steps:
+      - name: deploy
+        # ...deployment-specific steps
+
+         
