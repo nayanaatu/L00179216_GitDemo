@@ -28,6 +28,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install flake8 pytest mockito
+        pip install -r requirement.txt
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
@@ -41,8 +42,6 @@ jobs:
         coverage run -m pytest /home/runner/work/L00179216_GitDemo/L00179216_GitDemo/src/unittest/python/helloworld_tests.py -s -v   
         coverage report -m
         coverage html
-    - name: Upload Coverage Results
-      uses: codecov/codecov-action@v2
     - name: Deploy to Heroku
       env:
         HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
