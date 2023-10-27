@@ -3,9 +3,8 @@ import unittest
 
 import sys
 import os.path
-sys.path.append('/home/runner/work/L00179216_GitDemo/L00179216_GitDemo/src/')
+sys.path.append('C:\\Users\\nnagaraj\\L00179216_GitDemo\\src\\')
 print("SYS : ", sys.path)
-print("hh")
 
 from dev import helloworld
 
