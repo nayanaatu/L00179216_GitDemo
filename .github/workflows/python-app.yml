@@ -39,7 +39,7 @@ jobs:
       run: |
         pip install pytest pytest-cov codecov coverage
         export PYTHONPATH=dev
-        coverage run -m --omit=./unittest/* pytest ./unittest/app_tests.py -s -v  
+        coverage run -m --source=dev pytest ./unittest/app_tests.py -s -v  
         coverage report -m 
         coverage html
     - name: Upload Code Coverage Results
