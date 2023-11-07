@@ -6,8 +6,8 @@ import os.path
 sys.path.append('/home/runner/work/L00179216_GitDemo/L00179216_GitDemo/dev')
 print("SYS : ", sys.path)
 
-from dev import helloworld
-from app import index
+from helloworld import helloworld
+from ATUapp import index
 
 class WebAppTest(unittest.TestCase):
     """
