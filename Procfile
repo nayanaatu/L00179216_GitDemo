@@ -1,1 +1,1 @@
-web gunicorn --pythonpath dev ATUapp:app
+web gunicorn --pythonpath dev app:ATUapp
