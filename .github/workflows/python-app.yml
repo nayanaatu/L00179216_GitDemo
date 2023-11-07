@@ -38,7 +38,7 @@ jobs:
     - name: WebApp Test with pytest
       run: |
         pip install pytest pytest-cov codecov coverage
-        coverage run -m pytest /home/runner/work/L00179216_GitDemo/L00179216_GitDemo/unittest/app_tests.py -s -v   
+        coverage run -m pytest /home/runner/work/L00179216_GitDemo/L00179216_GitDemo/unittest/app_tests.py -s -v  --source=./dev 
         coverage report -m
         coverage html
     - name: Upload Code Coverage Results
