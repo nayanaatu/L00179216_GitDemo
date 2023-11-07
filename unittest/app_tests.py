@@ -24,7 +24,7 @@ class WebAppTest(unittest.TestCase):
         print("\n=========== TEST1 execution ========\n")
         verify(out).write("Hello world of DevOps\n")
 
-    def test_atuapp_response_message():
+    def test_atuapp_response_message(self):
         """
         This is the test method to check the message of ATUapp
         """
