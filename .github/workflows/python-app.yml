@@ -35,12 +35,14 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Test with pytest
+    - name: WebApp Test with pytest
       run: |
         pip install pytest pytest-cov codecov coverage
         coverage run -m pytest /home/runner/work/L00179216_GitDemo/L00179216_GitDemo/unittest/app_tests.py -s -v   
         coverage report -m
         coverage html
+    - name: Upload Code Coverage Results
+      uses: codecov/codecov-action@v2
     - name: Deploy to Heroku
       env:
         HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
