@@ -39,18 +39,11 @@ jobs:
       run: |
         pip install pytest pytest-cov codecov coverage
         export PYTHONPATH=dev
-        coverage run -m pytest /home/runner/work/L00179216_GitDemo/L00179216_GitDemo/unittest/app_tests.py -s -v  -cov=./dev 
+        coverage run -m pytest /home/runner/work/L00179216_GitDemo/L00179216_GitDemo/unittest/app_tests.py -s -v  --cov=dev
         coverage report -m
         coverage html
     - name: Upload Code Coverage Results
       uses: codecov/codecov-action@v2
-    - name: Deploy to Heroku
-      env:
-        HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
-        HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
-      if: github.ref == 'refs/heads/main' && job.status == 'success'
-      run: |
-        git remote add heroku https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git
-        git push heroku HEAD:master -f
+    
   
          
