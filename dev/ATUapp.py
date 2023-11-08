@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 
 @app.route('/hello/<name>')
-def hello_msg(name):
+def hellow_msg(name):
     return f"HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY {name}!!!"
 
 
