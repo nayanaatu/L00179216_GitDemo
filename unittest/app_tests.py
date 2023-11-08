@@ -7,7 +7,7 @@ sys.path.append('/home/runner/work/L00179216_GitDemo/L00179216_GitDemo/dev')
 print("SYS : ", sys.path)
 
 from dev import helloworld
-from app import index
+from app import hellow_msg
 
 class WebAppTest(unittest.TestCase):
     """
@@ -24,9 +24,9 @@ class WebAppTest(unittest.TestCase):
         print("\n=========== TEST1 execution ========\n")
         verify(out).write("Hello world of DevOps\n")
 
-    def test_atuapp_response_message(self):
+    def test_atuapp_response_message(self, name="Nayana"):
         """
         This is the test method to check the message of ATUapp
         """
         print("\n=========== TEST2 execution ========\n")
-        assert index() == "WELCOME TO ATU LETTERKENNY UNIVERSITY!!!"
+        assert hello_msg() == "HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY {name}!!!"
