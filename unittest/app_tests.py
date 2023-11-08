@@ -29,4 +29,4 @@ class WebAppTest(unittest.TestCase):
         This is the test method to check the message of ATUapp
         """
         print("\n=========== TEST2 execution ========\n")
-        assert hello_msg() == "HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY {name}!!!"
+        assert hellow_msg() == "HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY {name}!!!"
