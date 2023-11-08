@@ -27,7 +27,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install flake8 pytest mockito
+        pip install flake8 pytest mockito 
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
@@ -37,13 +37,21 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: WebApp Test with pytest
       run: |
-        pip install pytest pytest-cov codecov coverage
+        pip install pytest codecov coverage
         export PYTHONPATH=dev
         coverage run --source=dev -m pytest ./unittest/app_tests.py -s -v  
         coverage report -m 
         coverage html
     - name: Upload Code Coverage Results
       uses: codecov/codecov-action@v2
+    - name: Deploy to Heroku environment
+      env:
+        HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
+        HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
+      if: github.ref == 'refs/heads/main' && job.status == 'success'
+      run: |
+        git remote add heroku https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git
+        git push heroku HEAD:master -f
     
   
          
