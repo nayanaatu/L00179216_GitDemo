@@ -11,7 +11,7 @@ def hello_msg(name):
 def login():
 	if request.method == 'POST':
 		user = request.form['nm']
-		var = redirect(url_for(name=user))
+        var = redirect(url_for(name=user))
         print("retrun val : ", var)
         return var
 	else:
