@@ -10,7 +10,7 @@ def hello_msg(name):
 @app.route('/login', methods=['POST', 'GET'])
 def login():
 	if request.method == 'POST':
-		user = request.form['nm']
+        user = request.form['nm']
         var = redirect(url_for(name=user))
         print("retrun val : ", var)
         return var
