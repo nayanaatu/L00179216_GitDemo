@@ -24,9 +24,9 @@ class WebAppTest(unittest.TestCase):
         print("\n=========== TEST1 execution ========\n")
         verify(out).write("Hello world of DevOps\n")
 
-    def test_atuapp_response_message(self, name="Nayana"):
+    def test_atuapp_response_message(self):
         """
         This is the test method to check the message of ATUapp
         """
         print("\n=========== TEST2 execution ========\n")
-        assert hellow_msg("Nayana") == f"HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY {name}!!!"
+        assert hellow_msg() == f"HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY!!!"
