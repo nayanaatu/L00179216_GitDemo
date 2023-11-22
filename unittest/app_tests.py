@@ -32,7 +32,7 @@ class WebAppTest(unittest.TestCase):
         assert hellow_msg() == f"HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY!!!"
 
     def test_atuapp_student_gradelevel(self):
-         """
+        """
         This is the test method to check the atu student gradelevel
         """
         print("\n=========== TEST3 execution ========\n")
