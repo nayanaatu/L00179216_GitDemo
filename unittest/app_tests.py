@@ -4,10 +4,10 @@ import unittest
 import sys
 import os.path
 sys.path.append('/home/runner/work/L00179216_GitDemo/L00179216_GitDemo/dev')
-print("SYS : ", sys.path)
+print(f"SYS Path : {sys.path}")
 
 from dev import helloworld
-from app import hellow_msg
+from app import hellow_msg, student_postgraduate
 
 class WebAppTest(unittest.TestCase):
     """
@@ -30,3 +30,10 @@ class WebAppTest(unittest.TestCase):
         """
         print("\n=========== TEST2 execution ========\n")
         assert hellow_msg() == f"HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY!!!"
+
+    def test_atuapp_student_gradelevel(self):
+         """
+        This is the test method to check the atu student gradelevel
+        """
+        print("\n=========== TEST3 execution ========\n")
+        assert student_postgraduate(9) == f"welcome postgraduate students"
