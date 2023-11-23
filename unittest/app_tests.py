@@ -1,4 +1,5 @@
 from mockito import mock, verify
+from termcolor import colored
 import unittest
 
 import sys
@@ -29,7 +30,7 @@ class WebAppTest(unittest.TestCase):
         This is the test method to check the message of ATUapp
         """
         print("\n=========== TEST2 execution ========\n")
-        assert hellow_msg() ==  f"HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY!!!"
+        assert hellow_msg() ==  colored("HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY!!!", 'green', attrs=['reverse', 'blink'])
 
     def test_atuapp_student_gradelevel(self):
         """

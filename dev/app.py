@@ -1,6 +1,7 @@
 #/usr/local/bin/python3
 
 from flask import Flask
+from termcolor import colored
 
 app = Flask(__name__)
 
@@ -9,15 +10,8 @@ def hellow_msg():
     """
     Method to return hello message
     """
-    #strng = "HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY!!!"
-
-    my_html =  '''
-    <body style="background-color: #e1eb34;">
-        <h1 style="color:  #006400;">HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY!!!</h1>
-    </body>
-    '''
-    print(my_html)
-    return my_html
+    text = colored("HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY!!!", 'green', attrs=['reverse', 'blink'])
+    return text
 
 
 def student_postgraduate(student_label_number):
