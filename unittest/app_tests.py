@@ -36,4 +36,4 @@ class WebAppTest(unittest.TestCase):
         This is the test method to check the atu student gradelevel
         """
         print("\n=========== TEST3 execution ========\n")
-        assert student_postgraduate(9) == f"welcome postgraduate students"
+        assert student_postgraduate(9) == f"Welcome Postgraduate Student"
