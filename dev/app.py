@@ -13,9 +13,9 @@ def hellow_msg():
 
 def student_postgraduate(student_label_number):
     if student_label_number == 9:
-        return f"Welcome postgraduate students"
+        return f"Welcome Postgraduate Students"
     else:
-        return f"Welcome graduate students"
+        return f"Welcome Graduate Students"
 
 
 if __name__ == "__main__":
