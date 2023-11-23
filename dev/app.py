@@ -27,15 +27,17 @@ def student_postgraduate(student_label_number):
     else:
         return f"Welcome Graduate Students"
 
-@app.route("/")
 def print_with_color(s, color=Fore.WHITE, brightness=Style.NORMAL):
     """Utility function wrapping the regular `print()` function 
     but with colors and brightness"""
-    print(f"{brightness}{color}{s}{Style.RESET_ALL}")
+    print (f"{brightness}{color}{s}{Style.RESET_ALL}")
 
-for fore in FORES:
-    for brightness in BRIGHTNESS:
-        print_with_color("HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY!!!", color=fore, brightness=brightness)
+
+@app.route("/")
+def launch_web():
+    for fore in FORES:
+        for brightness in BRIGHTNESS:
+            print_with_color("HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY!!!", color=fore, brightness=brightness)
 
 
 if __name__ == "__main__":
