@@ -14,7 +14,7 @@ BRIGHTNESS = [ Style.DIM, Style.NORMAL, Style.BRIGHT]
 
 app = Flask(__name__)
 
-#@app.route("/")
+@app.route("/")
 def hellow_msg():
     """
     Method to return hello message
