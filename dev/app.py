@@ -31,11 +31,11 @@ def student_postgraduate(student_label_number):
 def print_with_color(s, color=Fore.WHITE, brightness=Style.NORMAL, **kwargs):
     """Utility function wrapping the regular `print()` function 
     but with colors and brightness"""
-    print(f"{brightness}{color}{s}{Style.RESET_ALL}", **kwargs)
+    return(f"{brightness}{color}{s}{Style.RESET_ALL}", **kwargs)
 
 for fore in FORES:
     for brightness in BRIGHTNESS:
-        return print_with_color("HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY!!!", color=fore, brightness=brightness)
+        print_with_color("HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY!!!", color=fore, brightness=brightness)
 
 
 if __name__ == "__main__":
