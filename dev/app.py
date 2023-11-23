@@ -9,8 +9,8 @@ def hellow_msg():
     """
     Method to return hello message
     """
-    print("\033[1;32m This text is Bright Green  \n")
-    return f"\033[1;32m HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY!!! \n"
+    strng = "\033[1;32m HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY!!! \n"
+    return strng 
 
 def student_postgraduate(student_label_number):
     """

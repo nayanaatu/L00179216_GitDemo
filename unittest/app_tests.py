@@ -29,7 +29,7 @@ class WebAppTest(unittest.TestCase):
         This is the test method to check the message of ATUapp
         """
         print("\n=========== TEST2 execution ========\n")
-        assert hellow_msg() ==  f"\033[1;32m HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY!!! \n"
+        assert hellow_msg() ==  "\033[1;32m HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY!!! \n"
 
     def test_atuapp_student_gradelevel(self):
         """
