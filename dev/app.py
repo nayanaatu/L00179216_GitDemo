@@ -20,7 +20,7 @@ def student_postgraduate(student_label_number):
     if student_label_number == 9:
         return f"Welcome Postgraduate Students"
     else:
-        return f"Welcome Graduate Students"
+        return f"Welcome  to Graduate Students"
 
 
 if __name__ == "__main__":
