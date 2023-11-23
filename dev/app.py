@@ -28,10 +28,10 @@ def student_postgraduate(student_label_number):
         return f"Welcome Graduate Students"
 
 @app.route("/")
-def print_with_color(s, color=Fore.WHITE, brightness=Style.NORMAL, **kwargs):
+def print_with_color(s, color=Fore.WHITE, brightness=Style.NORMAL):
     """Utility function wrapping the regular `print()` function 
     but with colors and brightness"""
-    return(f"{brightness}{color}{s}{Style.RESET_ALL}", **kwargs)
+    return(f"{brightness}{color}{s}{Style.RESET_ALL}")
 
 for fore in FORES:
     for brightness in BRIGHTNESS:
