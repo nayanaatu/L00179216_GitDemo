@@ -10,9 +10,7 @@ def hellow_msg():
     """
     Method to return hello message
     """
-    text = colored("HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY!!!", 'green', attrs=['reverse', 'blink'])
-    print(text)
-    return text
+    return f" *** HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY!!! ***"
 
 
 def student_postgraduate(student_label_number):
