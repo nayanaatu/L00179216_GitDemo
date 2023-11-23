@@ -19,7 +19,7 @@ def hellow_msg():
     """
     Method to return hello message
     """
-    return "HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY!!!"
+    return f"\033[1;32m HELLO, WELCOME TO ATU LETTERKENNY UNIVERSITY!!! \n"
 
 def student_postgraduate(student_label_number):
     if student_label_number == 9:
